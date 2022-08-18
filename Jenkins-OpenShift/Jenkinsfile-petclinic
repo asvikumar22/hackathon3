@@ -8,7 +8,7 @@ pipeline {
     stage('Create project') {
     steps {
         sh """cd openshift
-oc login https://localhost:8443 --username developer --password developer --insecure-skip-tls-verify=true
+oc login https://psnam.appmon3.conygre.com:8443 --username developer --password developer --insecure-skip-tls-verify=true
 if ! oc project ${projectName}
 then
   oc new-project ${projectName}

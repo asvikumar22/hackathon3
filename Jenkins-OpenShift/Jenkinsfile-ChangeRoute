@@ -10,7 +10,7 @@ pipeline {
     stage('Set Port Number of Web Service') {
       steps {
         sh """cd openshift
-oc login https://localhost:8443 --username developer --password developer --insecure-skip-tls-verify=true
+oc login https://psnam.appmon3.conygre.com:8443 --username developer --password developer --insecure-skip-tls-verify=true
 oc project ${projectName}
 oc delete route ${SERVICENAME}
 oc expose svc ${SERVICENAME} --name=${SERVICENAME} --port=${PORT}
